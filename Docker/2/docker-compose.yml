@@ -1,0 +1,20 @@
+version: '3.8'
+name: pyspark_awscli
+
+services:
+
+  awscli:
+    container_name: awscliV2
+    image: amazon/aws-cli:2.0.6
+
+        
+  pyspark:
+    container_name: pyspark
+    image: jupyter/pyspark-notebook
+    ports:
+      - "8088:8088"
+
+
+
+    
+
