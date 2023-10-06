@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  git:
+    container_name: alpine_git_test
+    image: alpine/git:latest
+
+  awscli:
+    container_name: awscliV2_test
+    image: amazon/aws-cli:latest
+    volumes:
+      - .:/workspace:cached
+    network_mode: service:pyspark
+        
+  pyspark:
+    container_name: pyspark_test
+    image: jupyter/pyspark-notebook
+    ports:
+      - "8888:8888"
+
+
+
+    
+

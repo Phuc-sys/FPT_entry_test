@@ -1,0 +1,10 @@
+{
+    "name": "Test",
+    // "build": {
+    //   "dockerfile": "Dockerfile"
+    // }
+    "dockerComposeFile": "docker-compose.yml",
+    "service": "awscli",
+    "workspaceFolder": "/workspaces/${localWorkspaceFolderBasename}",
+    "shutdownAction": "stopCompose"
+  }
